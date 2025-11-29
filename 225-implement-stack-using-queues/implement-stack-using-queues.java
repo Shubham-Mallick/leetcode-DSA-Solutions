@@ -5,7 +5,7 @@ class MyStack {
     public void push(int x) {
         queue.add(x);
         for (int i = 1; i < queue.size(); i++)
-            queue.add(queue.remove());
+            queue.add(queue.remove()); // add the element
     }
 
     public int pop() {
@@ -13,11 +13,11 @@ class MyStack {
     }
 
     public int top() {
-        return queue.peek();
+        return queue.peek(); // return the top element
     }
 
     public boolean empty() {
-        return queue.isEmpty();
+        return queue.isEmpty(); // checks empty or not
     }
 }
 
