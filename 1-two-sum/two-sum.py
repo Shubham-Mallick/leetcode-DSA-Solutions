@@ -1,10 +1,8 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        mp = {}
+        pair_idx = {}
+
         for i, num in enumerate(nums):
-            remaining = target - num
-            
-            if remaining in mp:
-                return [mp[remaining], i]
-            
-            mp[num] = i
+            if target - num in pair_idx:
+                return [i, pair_idx[target - num]]
+            pair_idx[num] = i
